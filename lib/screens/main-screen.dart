@@ -99,7 +99,3 @@ class MainScreen extends StatelessWidget {
     );
   }
 }
-
-class C {
-  int a = 5;
-}
