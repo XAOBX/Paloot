@@ -100,4 +100,6 @@ class MainScreen extends StatelessWidget {
   }
 }
 
-class C {}
+class C {
+  int a = 5;
+}
