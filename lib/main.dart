@@ -14,18 +14,19 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => ProvClass(),
-      child: Consumer<ProvClass>(
-        builder: (context, prov, child) {
-          return MaterialApp(
-            theme: prov.switchValue
-                ? ThemeChanger().darkTheme
-                : ThemeChanger().lightTheme,
-            home: Home(),
-          );
-        },
-      ),
+    return //ChangeNotifierProvider(
+        //create: (context) => ProvClass(),
+        Consumer<ProvClass>(
+      //child
+      builder: (context, prov, child) {
+        return MaterialApp(
+          theme: prov.switchValue
+              ? ThemeChanger().darkTheme
+              : ThemeChanger().lightTheme,
+          home: Home(),
+        );
+      },
+      //),
     );
   }
 }
