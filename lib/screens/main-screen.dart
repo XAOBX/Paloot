@@ -37,6 +37,14 @@ class MainScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
+                Container(child: Text('99')),
+                SizedBox(),
+                Container(child: Text('10')),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
                 Container(
                   width: 80,
                   height: 80,
