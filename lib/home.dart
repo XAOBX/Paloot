@@ -34,7 +34,22 @@ class Home extends StatelessWidget {
             activeTrackColor: Colors.blueGrey.shade200,
             inactiveThumbColor: Colors.orange,
             inactiveTrackColor: Colors.yellow[400],
-          )
+          ),
+          PopupMenuButton(
+            icon: Icon(Icons.menu), //don't specify icon if you want 3 dot menu
+            color: Colors.blue,
+            itemBuilder: (context) => [
+              PopupMenuItem<int>(
+                value: 0,
+                child: Text(
+                  "Setting",
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+            ],
+            onSelected: (item) => {print(item)},
+          ),
+          //TODO menu
         ],
       ),
       body: MainScreen(),
