@@ -33,13 +33,13 @@ class DgAlwallad extends StatelessWidget {
             SizedBox(),
             SizedBox(),
             SizedBox(),
-            Image.asset(logo[0].png),
+            Image.asset('${logo[0]}.png'),
             SizedBox(),
-            Image.asset(logo[1].png),
+            Image.asset('${logo[1]}.png'),
             SizedBox(),
-            Image.asset(logo[2].png),
+            Image.asset('${logo[2]}.png'),
             SizedBox(),
-            Image.asset(logo[3].png),
+            Image.asset('${logo[3]}.png'),
             SizedBox(),
             ElevatedButton(
                 onPressed: () {
