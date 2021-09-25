@@ -40,16 +40,16 @@ class Home extends StatelessWidget {
             color: Colors.blue,
             itemBuilder: (context) => [
               PopupMenuItem<int>(
-                value: 0,
-                child: Text(
-                  "Setting",
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
+                  value: 0,
+                  child: Column(
+                    children: [
+                      Text('AOB'),
+                      Text('sail'),
+                    ],
+                  )),
             ],
             onSelected: (item) => {print(item)},
           ),
-          //TODO menu
         ],
       ),
       body: MainScreen(),
