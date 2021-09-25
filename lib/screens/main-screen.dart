@@ -99,6 +99,11 @@ class MainScreen extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       fixedSize: Size(100, 20),
                     )),
+                TextButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, 'dw');
+                    },
+                    child: Text('aaa'))
               ],
             )
           ],

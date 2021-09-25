@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:paloot/home.dart';
+//import 'package:paloot/screens/main-screen.dart';
 import 'package:provider/provider.dart';
 import 'home.dart';
 import 'models/theme.dart';
+import 'screens/dgAlwalad.dart';
+import 'screens/ykaber.dart';
 
 void main() {
   runApp(ChangeNotifierProvider(
@@ -14,12 +17,15 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return //ChangeNotifierProvider(
-        //create: (context) => ProvClass(),
-        Consumer<ProvClass>(
-      //child
+    return Consumer<ProvClass>(
       builder: (context, prov, child) {
         return MaterialApp(
+          initialRoute: 'main',
+          routes: {
+            'main': (context) => MyApp(),
+            'dw': (context) => DgAlwallad(),
+            'yk': (context) => Ykaber()
+          },
           theme: prov.switchValue
               ? ThemeChanger().darkTheme
               : ThemeChanger().lightTheme,
