@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Wallad extends StatelessWidget {
+class DgAlwallad extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold();
