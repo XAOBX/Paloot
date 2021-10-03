@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:paloot/main.dart';
+import 'package:paloot/screens/dgAlwalad.dart';
 import 'package:provider/provider.dart';
 import 'package:paloot/models/text-score.dart';
 
@@ -101,7 +102,10 @@ class MainScreen extends StatelessWidget {
                     )),
                 TextButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, 'dw');
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (BuildContext context) => DgAlwallad()));
                     },
                     child: Text('aaa'))
               ],

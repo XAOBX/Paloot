@@ -5,23 +5,9 @@ class DgAlwallad extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List logo = ['heart', 'club', 'spade', 'diamond'];
-    List shuffle(List items) {
-      var random = new Random();
 
-      // Go through all elements.
-      for (var i = items.length - 1; i > 0; i--) {
-        // Pick a pseudorandom number according to the list length
-        var n = random.nextInt(i + 1);
+    logo.shuffle();
 
-        var temp = items[i];
-        items[i] = items[n];
-        items[n] = temp;
-      }
-
-      return items;
-    }
-
-    shuffle(logo);
     print(logo);
 
     return Scaffold(
@@ -33,19 +19,29 @@ class DgAlwallad extends StatelessWidget {
             SizedBox(),
             SizedBox(),
             SizedBox(),
-            Image.asset('${logo[0]}.png'),
+            Image(image: AssetImage('assets/images/${logo[0]}.png')),
             SizedBox(),
-            Image.asset('${logo[1]}.png'),
+            Image(image: AssetImage('assets/images/${logo[1]}.png')),
             SizedBox(),
-            Image.asset('${logo[2]}.png'),
+            Image(image: AssetImage('assets/images/${logo[2]}.png')),
             SizedBox(),
-            Image.asset('${logo[3]}.png'),
+            Image(image: AssetImage('assets/images/${logo[3]}.png')),
             SizedBox(),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                child: Text(''))
+            SizedBox(),
+            SizedBox(),
+            SizedBox(),
+            SizedBox(),
+            Column(
+              children: [
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    child: Text('رجوع')),
+                SizedBox(),
+              ],
+            ),
+            SizedBox(),
           ],
         ),
       ),

@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:paloot/home.dart';
-//import 'package:paloot/screens/main-screen.dart';
 import 'package:provider/provider.dart';
 import 'home.dart';
 import 'models/theme.dart';
-import 'screens/dgAlwalad.dart';
-import 'screens/ykaber.dart';
 
 void main() {
   runApp(ChangeNotifierProvider(
@@ -20,19 +17,12 @@ class MyApp extends StatelessWidget {
     return Consumer<ProvClass>(
       builder: (context, prov, child) {
         return MaterialApp(
-          initialRoute: 'main',
-          routes: {
-            'main': (context) => MyApp(),
-            'dw': (context) => DgAlwallad(),
-            'yk': (context) => Ykaber()
-          },
           theme: prov.switchValue
               ? ThemeChanger().darkTheme
               : ThemeChanger().lightTheme,
           home: Home(),
         );
       },
-      //),
     );
   }
 }

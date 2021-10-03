@@ -14,7 +14,7 @@ class Home extends StatelessWidget {
           "pppppppp",
         ),
         actions: [
-          Center(
+          /*Center(
             child: Icon(
               Provider.of<ProvClass>(context).switchValue
                   ? Icons.dark_mode
@@ -23,7 +23,7 @@ class Home extends StatelessWidget {
                   ? Colors.blueGrey.shade800
                   : Colors.orange,
             ),
-          ),
+          ),*/
           Switch(
             value: Provider.of<ProvClass>(context).switchValue,
             onChanged: (newValue) {
