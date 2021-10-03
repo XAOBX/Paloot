@@ -100,14 +100,6 @@ class MainScreen extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       fixedSize: Size(100, 20),
                     )),
-                TextButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (BuildContext context) => DgAlwallad()));
-                    },
-                    child: Text('aaa'))
               ],
             )
           ],

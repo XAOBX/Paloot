@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:paloot/main.dart';
 import 'package:provider/provider.dart';
 import 'screens/main-screen.dart';
+import 'screens/dgAlwalad.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -11,10 +12,10 @@ class Home extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: Text(
-          "pppppppp",
+          "حاسبة بلوت",
         ),
         actions: [
-          /*Center(
+          Center(
             child: Icon(
               Provider.of<ProvClass>(context).switchValue
                   ? Icons.dark_mode
@@ -23,7 +24,7 @@ class Home extends StatelessWidget {
                   ? Colors.blueGrey.shade800
                   : Colors.orange,
             ),
-          ),*/
+          ),
           Switch(
             value: Provider.of<ProvClass>(context).switchValue,
             onChanged: (newValue) {
@@ -36,17 +37,26 @@ class Home extends StatelessWidget {
             inactiveTrackColor: Colors.yellow[400],
           ),
           PopupMenuButton(
-            icon: Icon(Icons.menu), //don't specify icon if you want 3 dot menu
-            color: Colors.blue,
+            //icon: Icon(Icons), //don't specify icon if you want 3 dot menu
+            //color: Colors.blue,
             itemBuilder: (context) => [
               PopupMenuItem<int>(
-                  value: 0,
+
+                  //value: 0,
                   child: Column(
-                    children: [
-                      Text('AOB'),
-                      Text('sail'),
-                    ],
-                  )),
+                children: [
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    DgAlwallad()));
+                      },
+                      child: Text('دق الولد')),
+                  ElevatedButton(onPressed: null, child: Text('sail')),
+                ],
+              )),
             ],
             onSelected: (item) => {print(item)},
           ),
